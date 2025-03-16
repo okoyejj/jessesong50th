@@ -1,0 +1,110 @@
+/* Reset some default styling */
+body,
+h1,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #A57C00;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #A57C00;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #A57C00;
+    color: #f2f2f2;
+}
+
+/* Page Sections */
+.section {
+    padding: 40px;
+}
+
+.section:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+#logo{
+    width: 48px;
+    margin: 0 auto;
+    display: block;
+}
+
+#donation-details {
+    margin-left: 40px;
+}
+
+.first_paragraph::first-letter {
+    font-size: 3em;
+    color: #A57C00;
+    font-family: "brush script mt";
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 1em 0;
+    color: #333;
+    text-align: justify;
+}
+
+.gold{
+    color: #A57C00;
+}
+
+.parallax {
+    background-image: url("../images/pastor_song_glasses.jpeg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 20px;
+}
+.parallax2{
+    background-image: url("../images/pastor_song_blue_suit.png");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 20px;
+}
+
+.parallax3{
+    background-image: url("../images/savethedate.jpeg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 20px;
+}
