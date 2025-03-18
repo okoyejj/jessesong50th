@@ -14,12 +14,14 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
+    -webkit-text-size-adjust: 100%; /* Prevents font scaling in iOS */
 }
 
 /* Navigation Bar */
 .navbar {
     background-color: #333;
     overflow: hidden;
+    position: -webkit-sticky; /* iOS Safari */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -48,7 +50,7 @@ body {
     background-color: #f4f4f4;
 }
 
-#logo{
+#logo {
     width: 48px;
     margin: 0 auto;
     display: block;
@@ -73,38 +75,42 @@ p {
     text-align: justify;
 }
 
-.gold{
+.gold {
     color: #A57C00;
+}
+
+/* Parallax backgrounds */
+.parallax,
+.parallax2,
+.parallax3 {
+    height: 500px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .parallax {
     background-image: url("../images/pastor_song_glasses.jpeg");
-    height: 500px;
     background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-top: 20px;
-}
-.parallax2{
-    background-image: url("../images/pastor_song_blue_suit.png");
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-top: 20px;
 }
 
-.parallax3{
-    background-image: url("../images/savethedate.jpeg");
-    height: 500px;
+.parallax2 {
+    background-image: url("../images/pastor_song_blue_suit.png");
     background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-top: 20px;
+}
+
+.parallax3 {
+    background-image: url("../images/savethedate.jpeg");
+    background-attachment: fixed;
+}
+
+/* iOS Specific Fallback */
+/* iOS Safari doesn’t support background-attachment: fixed properly, so we override it */
+@supports (-webkit-overflow-scrolling: touch) {
+    .parallax,
+    .parallax2,
+    .parallax3 {
+        background-attachment: scroll;
+    }
 }
